@@ -30,11 +30,11 @@ if (isTouchScreen){
             var bcr = event.target.getBoundingClientRect();
             var x = event.targetTouches[0].clientX - bcr.x;
             var y = event.targetTouches[0].clientY - bcr.y;
-            console.log(x,y)
-            $("#"+toBeMoved).css("top", relY-7 +"px")
-            $("#"+toBeMoved).css("left", relX-7 +"px")
-            $("#"+toBeMoved + "overlay").css("top", relY-7 +"px")
-            $("#"+toBeMoved + "overlay").css("left", relX-7 +"px")
+            console.log(bcr.x,bcr.y, event.targetTouches[0].clientX, event.targetTouches[0].clientY)
+            $("#"+toBeMoved).css("top", y-7 +"px")
+            $("#"+toBeMoved).css("left", x-7 +"px")
+            $("#"+toBeMoved + "overlay").css("top", y-7 +"px")
+            $("#"+toBeMoved + "overlay").css("left", x-7 +"px")
 
         });
 }
