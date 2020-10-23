@@ -13,7 +13,6 @@ $("#board").mousemove(function(event){
             event.preventDefault()
             relX = Math.round(event.pageX - $(this).offset().left);
             relY = Math.round(event.pageY - $(this).offset().top);
-            var relBoxCoords = "(" + relX + "," + relY + ")";
             $("#"+toBeMoved).css("top", relY-7 +"px")
             $("#"+toBeMoved).css("left", relX-7 +"px")
             $("#"+toBeMoved + "overlay").css("top", relY-7 +"px")
@@ -24,9 +23,9 @@ $("#board").mousemove(function(event){
 if (isTouchScreen){
     $("#board").on('touchmove', function(event){ 
             event.preventDefault()
+            alert("anything")
             relX = Math.round(event.pageX - $(this).offset().left);
             relY = Math.round(event.pageY - $(this).offset().top);
-            var relBoxCoords = "(" + relX + "," + relY + ")";
             $("#"+toBeMoved).css("top", relY-7 +"px")
             $("#"+toBeMoved).css("left", relX-7 +"px")
             $("#"+toBeMoved + "overlay").css("top", relY-7 +"px")
