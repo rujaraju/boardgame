@@ -26,7 +26,11 @@ if (isTouchScreen){
             //alert("anything")
             relX = Math.round(event.pageX - $(this).offset().left);
             relY = Math.round(event.pageY - $(this).offset().top);
-            console.log(relX, relY)
+            //console.log(relX, relY)
+            var bcr = event.target.getBoundingClientRect();
+            var x = event.targetTouches[0].clientX - bcr.x;
+            var y = event.targetTouches[0].clientY - bcr.y;
+            console.log(x,y)
             $("#"+toBeMoved).css("top", relY-7 +"px")
             $("#"+toBeMoved).css("left", relX-7 +"px")
             $("#"+toBeMoved + "overlay").css("top", relY-7 +"px")
