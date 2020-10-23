@@ -3,6 +3,19 @@ var relY
 var toBeMoved;
 var highestZ = 0
 
+function is_touch_enabled() { 
+    return ( 'ontouchstart' in window ) ||  
+           ( navigator.maxTouchPoints > 0 ) ||  
+           ( navigator.msMaxTouchPoints > 0 ); 
+}
+
+function checkTouchDevice() {
+   return 'ontouchstart' in document.documentElement;
+}
+
+alert(is_touch_enabled())
+alert(checkTouchDevice())
+
 $("#board").mousemove(function(event){            
             relX = Math.round(event.pageX - $(this).offset().left);
             relY = Math.round(event.pageY - $(this).offset().top);
