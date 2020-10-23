@@ -23,9 +23,10 @@ $("#board").mousemove(function(event){
 if (isTouchScreen){
     $("#board").on('touchmove', function(event){ 
             event.preventDefault()
-            alert("anything")
+            //alert("anything")
             relX = Math.round(event.pageX - $(this).offset().left);
             relY = Math.round(event.pageY - $(this).offset().top);
+            console.log(relX, relY)
             $("#"+toBeMoved).css("top", relY-7 +"px")
             $("#"+toBeMoved).css("left", relX-7 +"px")
             $("#"+toBeMoved + "overlay").css("top", relY-7 +"px")
