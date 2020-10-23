@@ -22,7 +22,7 @@ $("#board").mousemove(function(event){
 
 if (isTouchScreen){
     $("#board").on('touchmove', function(event){ 
-            event.preventDefault()
+            //event.preventDefault()
             //alert("anything")
             relX = Math.round(event.pageX - $(this).offset().left);
             relY = Math.round(event.pageY - $(this).offset().top);
