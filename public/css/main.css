@@ -5,6 +5,19 @@
 	margin: auto
 }
 
+.overlay {
+	display: block;
+	position: absolute;
+	background-color: rgba(255,255,255,0)
+}
+
+#boardoverlay {
+	top: 0;
+	left: 0;
+	width: 1280px;
+	height: 800px;
+}
+
 .piece {
 	display: block;
 	position: absolute;
@@ -14,6 +27,12 @@
 	height: 50px;
 	border-radius: 25px;
 	border-style: solid;
+}
+
+.pieceoverlay {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
 }
 
 #background {
@@ -47,6 +66,11 @@
 }
 
 #redpiece {
+	left: 100px;
+	top: 25px;
+}
+
+#redpieceoverlay {
 	left: 100px;
 	top: 25px;
 }

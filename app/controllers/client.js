@@ -1,6 +1,7 @@
 var relX
 var relY
 var toBeMoved;
+var highestZ = 0
 
 $("#board").mousemove(function(event){            
             relX = Math.round(event.pageX - $(this).offset().left);
@@ -22,6 +23,9 @@ $("#board").mousemove(function(event){
             if (id.length < 3){return}
             if (toBeMoved == undefined){
                  toBeMoved = id
+                 highestZ++
+                 $("#" + id).css("z-index", highestZ)
+                 $("#" + id + "overlay").css("z-index", highestZ)
             } else {
                 toBeMoved = undefined
             }
@@ -29,6 +33,10 @@ $("#board").mousemove(function(event){
 
         function test2(){
             test3(event.target.parentElement.id)
+}
+
+        function test4(){
+            test3(event.target.id.split("overl")[0])
 }
 
 function pause(milliseconds) {
