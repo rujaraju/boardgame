@@ -10,6 +10,8 @@ $("#board").mousemove(function(event){
             //$("#redpiece").attr("top", relY +"px")
             $("#"+toBeMoved).css("top", relY-7 +"px")
             $("#"+toBeMoved).css("left", relX-7 +"px")
+            $("#"+toBeMoved + "overlay").css("top", relY-7 +"px")
+            $("#"+toBeMoved + "overlay").css("left", relX-7 +"px")
             //console.log(relBoxCoords);
             //console.log($("#redpiece").attr("top"))
         });
